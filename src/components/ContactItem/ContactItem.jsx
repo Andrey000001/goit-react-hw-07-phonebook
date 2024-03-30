@@ -11,14 +11,18 @@ const ContactItem = ({ contact }) => {
   };
 
   return (
-    <Item>
-      <FaGenderless />
-      <Name>{name}:</Name>
-      <Number>{number}</Number>
-      <Button disabled={isLoading} onClick={() => handleDelete(id)}>
-        Delete
-      </Button>
-    </Item>
+    <>
+      (
+        <Item>
+          <FaGenderless />
+          <Name>{name}:</Name>
+          <Number>{number}</Number>
+          <Button disabled={isLoading} onClick={() => handleDelete(id)}>
+            Delete
+          </Button>
+        </Item>
+      )
+    </>
   );
 };
 export default ContactItem;
